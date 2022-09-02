@@ -1,0 +1,81 @@
+<app-sidebar></app-sidebar>
+<div class="app-content content ">
+  <div class="content-overlay"></div>
+  <div class="header-navbar-shadow"></div>
+  <div class="content-wrapper container-xxl p-0">
+    <div class="content-header row">
+    </div>
+    <div class="row"></div>
+    <div class="card">
+    
+      <div class="card-header card-header-rose card-header-icon">
+    
+        <h2>AddSector</h2> 
+    
+      </div>
+      <!--/card-header-->
+    
+    
+      <div class="card-body ">
+    
+        <div class="col-md-12">
+    
+          <form  class="form-inline justify-content-center">
+    
+            <div class="row">
+    
+              <div class="col-6">
+                <div class="form-group">
+    
+                  <label for="first-name-icon">Secteur</label>
+                  <div class="input-group input-group-merge">
+                
+                    </div>
+                    <input type="text" id="secteur" class="form-control" name="secteur" placeholder="Secteur"  [(ngModel)]="se.nom"required> 
+    
+                  </div>
+    
+                </div>
+                <!--/form group-->
+              <div class="col-6">
+                <div class="form-group ">
+    
+                  <label for="first-name-icon">state</label>
+                  <div class="input-group input-group-merge">
+                   
+                    </div>
+                    <input type="text" id="e" class="form-control" name="state" placeholder="state"  [(ngModel)]="se.etat"required>
+    
+                  </div>
+    
+                </div>
+                <!--/form group-->
+
+              <!--/col-6-->
+    
+            </div>
+            <!--/row-->
+            <br> <br>
+    
+            <div class="row align ">
+    
+              <div class="row addBtn">
+    
+                <div class="col-md-7 ">
+                  <button type="submit" class="btn btn-primary btn-rounded" (click)="add()">Add</button>
+                </div>
+              </div>
+            </div>
+            <!--/row align-->
+          </form>
+          <!--/form form-vertical-->
+        </div>
+        <!--/col-md-12-->
+      </div>
+      <!--/card-body-->
+    </div>
+    <!--/card-->
+  </div>
+</div>
+
+

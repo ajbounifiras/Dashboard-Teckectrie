@@ -1,0 +1,55 @@
+<app-sidebar></app-sidebar>
+<div class="app-content content ">
+  <div class="content-overlay"></div>
+  <div class="header-navbar-shadow"></div>
+  <div class="content-wrapper container-xxl p-0">
+    <div class="content-header row">
+    </div>
+    <div class="content-body">
+      <div class="card">
+    
+        <div class="card-header card-header-rose card-header-icon">
+      
+          <h2>ViewUser</h2> 
+      
+        </div>
+      <section>
+      
+       <div class="card">
+         <div class="card-body">
+           <div class="card-text">
+
+<div class="card-body" style="overflow-y: scroll;">
+    <div class="row">
+
+<!--table-->
+<div class="card-body">
+
+    <div class="row">
+        <table class="table table-responsive-sm table-bordered table-outline mb-0">
+            <thead class="thead-light">
+                <tr>
+                    <th class="text-center">state</th>
+                    <th >UserActions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let v of listu">
+                    <td > {{v.nom}}</td>
+                    <td>
+                      <div>
+                        <button type="button" class="btn btn-danger btn-rounded" (click)="delete(v._id)"><i data-feather="trash-2"></i>Delete</button>
+                          <button  button type="button" class="btn btn-primary btn-rounded" (click)="edit(v._id)"><i data-feather="edit"></i> Edit</button>
+                      </div>
+                  </td>
+                </tr>
+  
+            </tbody>
+        </table>
+    </div>
+  </div>
+  <!--/card-->
+           </div>
+         </div>
+       </div>
+       

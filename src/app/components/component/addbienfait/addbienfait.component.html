@@ -1,0 +1,102 @@
+<app-sidebar></app-sidebar>
+<div class="app-content content ">
+  <div class="content-overlay"></div>
+  <div class="header-navbar-shadow"></div>
+  <div class="content-wrapper container-xxl p-0">
+    <div class="content-header row">
+    </div>
+    <div class="content-body">
+      <section>
+      <div class="card">
+        <div class="card-body">
+          <div class="card-text">
+      <div class="row"></div>
+    <div class="card">
+      <div class="card-header card-header-rose card-header-icon">
+        <h2>AddService</h2> 
+      </div>
+      <!--/card-header-->
+      <div class="card-body ">
+    
+        <div class="col-md-12">
+    
+          <form  class="form-inline justify-content-center">
+    
+            <div class="row">
+    
+              <div class="col-6">
+                <div class="form-group">
+    
+                  <label for="exampleFormControlInput1">Name</label>
+                  <div class="input-group input-group-merge">
+                    </div>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="name" placeholder="name" [(ngModel)]="service.name"required>
+                  </div>
+                <!--/form group-->
+              </div>
+              <!--/col-6-->
+              <div class="col-6">
+                <div class="form-group ">
+                  <label  for="exampleFormControlInput1">Description</label>
+                  <div class="input-group input-group-merge">
+                    </div>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="description" placeholder="description" [(ngModel)]="service.description" required>
+                  </div>
+                <!--/form group-->
+              </div>
+              <!--/col-6-->
+            </div>
+            <!--/row-->
+            <!--/row-->
+            <br>
+            <div class="row">
+             <div class="col-6">
+                <div class="form-group">
+    
+                  <label>Etablissement</label>
+                  <div class="input-group input-group-merge">
+                  <select  class="form-control"  name="etablissement" placeholder="etablissement" [(ngModel)]="service.etablissement" required>
+                    <option *ngFor="let service of listeEtablissement" [value]="service._id">{{service.name}}</option>
+                  </select>
+                </div>
+                <!--/form group-->
+              </div>
+              <!--/col-md-6-->
+              </div>
+              
+              <div class="col-md-4">
+                <div class="form-group">
+                  <input
+                  type="file"
+                  name="image"
+                  [(ngModel)]="service.image"
+                  ng2FileSelect
+                  [uploader]="uploader"
+                  accept="image/x-png,image/gif,image/jpeg"
+                />
+                </div>
+                </div>
+            </div>
+            
+            <!--/row-->
+              <br>
+            <br> <br>
+            <div class="row align ">
+              <div class="row addBtn">
+                <div class="col-md-7 ">
+                  <button type="submit" class="btn btn-primary btn-rounded" (click)="add()">Add</button>
+                </div>
+              </div>
+            </div>
+            <!--/row align-->
+          </form>
+          <!--/form form-vertical-->
+        </div>
+        <!--/col-md-12-->
+      </div>
+      <!--/card-body-->
+    </div>
+    <!--/card-->
+  </div>
+</div>
+</div>
